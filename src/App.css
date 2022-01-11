@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Poppins', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -8,9 +16,26 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .fa-arrow-circle-up {
+    font-size: 150px;
+    color: #61dafb;
+    animation: App-logo-spin infinite 1.5s linear;
   }
+}
+
+.fa-frown {
+  font-size: 150px;
+  color: #61dafb;
+  animation: rotateIcon infinite 5s linear;
+}
+
+a {
+  text-decoration: none;
+  color: #61dafb;
+  border: 3px solid #61dafb;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 30px;
 }
 
 .App-header {
@@ -29,10 +54,22 @@
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  0% {
+    transform: translateY(0px);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
   }
 }
